@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200,600&display=swap");
+
+:root {
+  /* Variaveis Fontes */
+  --font-primary: "Chakra Petch", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  /* Variaveis Cores */
+  --color-primary: #030303;
+  --color-secondary: #fffafa;
+  --color-tertiary: #fafaff;
+  --color-alternativ: #363c41;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.cabecalho {
+  padding: 2rem;
+}
+
+.cabecalho__navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho__navegacao_imagem__logo {
+  fill: var(--color-secondary);
+}
+
+.cabecalho__navegacao__texto {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+.conteudo {
+  padding: 0 2rem;
+}
+
+.conteudo__titulo {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--color-secondary);
+}
+
+.conteudo__texto {
+  display: flex;
+  height: 80vh;
+  gap: 20px;
+}
+
+.conteudo__texto__principal {
+  display: flex;
+  flex: 70%;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.conteudo__texto__principal__area {
+  height: 100%;
+  font-size: 1.5rem;
+  font-family: var(--font-secondary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.conteudo__texto__principal__botao {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.conteudo__texto__principal__botao .criptografar,
+.descriptografar,
+.copiar {
+  padding: 1rem 7rem;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  transition: all 0.5s;
+}
+
+.conteudo__texto__principal__botao .descriptografar {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+}
+
+.conteudo__texto__principal__botao button:hover {
+  background-color: var(--color-alternativ);
+}
+
+.conteudo__texto__secundario {
+  display: flex;
+  flex-direction: column;
+  flex: 20%;
+  padding: 20px;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra suave branca */
+}
+
+.conteudo__texto__secundario__imagem {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  gap: 20px;
+  font-family: var(--font-secondary);
+  text-align: center;
+}
+
+.conteudo__texto__secundario__imagem__titulo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.conteudo__texto__secundario__imagem__texto {
+  font-size: 1rem;
+}
+
+.conteudo__texto__secundario__area {
+  display: none;
+  height: 100%;
+  font-size: 1.5rem;
+  font-family: var(--font-secondary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.conteudo__texto__secundario_botao button:hover {
+  background-color: var(--color-alternativ);
+}
+
+.conteudo__texto__secundario_botao {
+  display: none;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  padding: 4rem 2rem;
+
+  font-size: 1rem;
+  font-family: var(--font-secondary);
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 5px; /* Largura da barra de rolagem */
+  background-color: var(--color-primary);
+  border-radius: 5px;
+}
+
+/* Estilizando o traço (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-alternativ); /* Cor do traço */
+  border-radius: 5px; /* Borda arredondada do traço */
+}
+
+/* Adicionando botão do Dark Mode*/
+.switch-container {
+  display: flex;
+
+  align-items: center;
+}
+
+.switch-container p {
+  color: #555;
+  padding-right: 10px;
+  font-family: var(--font-secondary);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#status {
+  margin-left: 10px;
+  color: #555;
+}
+
+.cabecalho__navegacao__rigth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+  .conteudo__texto {
+    height: 70vh;
+  }
+
+  .conteudo__texto__principal__botao .criptografar,
+  .descriptografar,
+  .copiar {
+    padding: 1rem 4rem;
+  }
+
+  .conteudo__texto__secundario__imagem__svg {
+    width: 250px;
+  }
+
+  .conteudo__texto__secundario__imagem__titulo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .conteudo__texto {
+    flex-direction: column;
+  }
+
+  .conteudo__texto__principal__botao {
+    padding: 0;
+  }
+
+  .conteudo__texto__principal__botao .criptografar,
+  .descriptografar,
+  .copiar {
+    font-size: 1.25rem;
+    padding: 1rem 4rem;
+  }
+
+  .conteudo__texto__secundario__imagem__svg {
+    display: none;
+  }
+
+  .conteudo__texto__secundario__imagem__texto {
+    font-size: 1.5rem;
+  }
+
+  .conteudo__texto__secundario__imagem__titulo {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .cabecalho {
+    padding: 1rem;
+  }
+  .cabecalho__navegacao {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 20px;
+  }
+
+  .conteudo__titulo {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .conteudo__texto {
+    flex-direction: column;
+  }
+
+  .conteudo__texto__principal__botao {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .conteudo__texto__principal__botao .criptografar,
+  .descriptografar,
+  .copiar {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .conteudo__texto__secundario__imagem__svg {
+    display: none;
+  }
+
+  .conteudo__texto__secundario__imagem__titulo {
+    font-size: 1rem;
+  }
+
+  .conteudo__texto__secundario__imagem__texto {
+    font-size: 0.725rem;
+  }
+  .footer {
+    padding: 1rem 2rem;
+  }
+  .footer p {
+    font-size: 0.725rem;
+  }
+}
+
+@media (max-width: 320px) {
+}
