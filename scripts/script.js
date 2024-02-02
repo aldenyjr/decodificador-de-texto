@@ -10,10 +10,23 @@ let imagemAlternativa = document.querySelector(
 let botaoCopiar = document.querySelector(".conteudo__texto__secundario_botao");
 textoAreaPrincipal.focus();
 
+// MODAL ATENCAO
+let modalAtencao = document.querySelector(".modal");
+let modalAtencaoBotaoFechar = document.querySelector(
+  ".modal__container__botao__fechar"
+);
+modalAtencaoBotaoFechar.addEventListener("click", () => {
+  modalAtencao.style.display = "none";
+});
+modalAtencao.addEventListener("click", () => {
+  modalAtencao.style.display = "none";
+});
+
 textoAreaPrincipal.addEventListener("input", () => {
   let regex = /[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜÇáéíóúàèìòùâêîôûãõäëïöüç@#$%^&*()_+]/;
   if (regex.test(textoAreaPrincipal.value)) {
-    alert("Por favor, evite letras maiúsculas ou caracteres especiais.");
+    modalAtencao.style.display = "flex";
+    // alert("Por favor, evite letras maiúsculas ou caracteres especiais.");
     textoAreaPrincipal.value = textoAreaPrincipal.value.replace(regex, "");
   }
 });

@@ -68,6 +68,7 @@ body {
 
 .conteudo__texto__principal__informacao {
   display: flex;
+  align-items: center;
   padding: 0 0 1rem 0;
   gap: 0.5rem;
   font-family: var(--font-secondary);
@@ -264,9 +265,83 @@ input:checked + .slider:before {
   gap: 20px;
 }
 
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #606a7269;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  height: 40%;
+  border-radius: 5%;
+  background-color: var(--color-alternativ);
+  box-shadow: 0 0 6px var(--color-secondary);
+}
+
+.modal__container__botao {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.modal__container__botao__fechar {
+  width: 1.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.modal__container__conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container__conteudo__imagem {
+  width: 20%;
+  padding: 0 1rem 1rem;
+}
+
+.modal__container__conteudo__titulo {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+}
+
+.modal__container__conteudo__texto {
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: var(--font-secondary);
+  padding: 0.5rem 0;
+  color: var(--color-secondary);
+}
+
 /* Responsividade */
 
 @media (max-width: 1024px) {
+  .modal__container {
+    width: 80%;
+  }
+  .modal__container__conteudo__imagem {
+    width: 30%;
+  }
+
+  .modal__container__conteudo__titulo {
+    font-size: 3rem;
+  }
+
+  .modal__container__conteudo__texto {
+    font-size: 1.725rem;
+  }
+
   .conteudo__texto {
     height: 70vh;
   }
@@ -287,6 +362,18 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+  .modal__container {
+    width: 70%;
+  }
+
+  .modal__container__conteudo__imagem {
+    width: 30%;
+  }
+
+  .modal__container__conteudo__titulo {
+    font-size: 3rem;
+  }
+
   .conteudo__texto {
     flex-direction: column;
   }
@@ -316,6 +403,22 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 500px) {
+  .modal__container__conteudo__titulo {
+    font-size: 1.5rem;
+  }
+
+  .modal__container__conteudo__texto {
+    font-size: 1rem;
+  }
+
+  .modal__container__conteudo__imagem {
+    padding: 0;
+  }
+
+  .modal__container {
+    width: 80%;
+  }
+
   .cabecalho {
     padding: 1rem;
   }
@@ -370,5 +473,4 @@ input:checked + .slider:before {
   }
 }
 
-@media (max-width: 320px) {
-}
+/* -------------- TESTANDO MODAL --------------- */
