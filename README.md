@@ -16,8 +16,9 @@ Decodificador desenvolvido no Challenge ONE Iniciante em Programação na conclu
 
 # Layout e Deploy da Aplicação :dash:
 
-![Laptop-1-1440x900](https://github.com/aldenyjr/decodificador-de-texto/assets/114154072/fbb48dc3-b867-4a87-ad4e-e90f248d14a7)
-![Galaxy-S9-Note-8-S8-360x740](https://github.com/aldenyjr/decodificador-de-texto/assets/114154072/f77a7b52-d121-440d-a80b-0ab0df56fa63)
+![Galaxy-S9-Plus-S8-Plus-413x818](https://github.com/aldenyjr/decodificador-de-texto/assets/114154072/d37e5384-0b65-4ce7-bc87-887985a804f4)
+![iPad-Mini-768x1024](https://github.com/aldenyjr/decodificador-de-texto/assets/114154072/5e1a8a02-3664-4cd8-9b93-501421a82cc1)
+![Laptop-1-1440x900](https://github.com/aldenyjr/decodificador-de-texto/assets/114154072/6ab31f03-c980-4c65-910f-84ba17758cfe)
 
 > Link do deploy da aplicação: <a href="https://aldenyjr.github.io/decodificador-de-texto/">Clique e Veja!</a>
 

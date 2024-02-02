@@ -66,6 +66,14 @@ body {
   padding: 20px;
 }
 
+.conteudo__texto__principal__informacao {
+  display: flex;
+  padding: 0 0 1rem 0;
+  gap: 0.5rem;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+}
+
 .conteudo__texto__principal__area {
   height: 100%;
   font-size: 1.5rem;
@@ -110,9 +118,10 @@ body {
   flex-direction: column;
   flex: 20%;
   padding: 20px;
+  background-color: var(--color-secondary);
   border: 1px solid var(--color-tertiary);
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra suave branca */
+  box-shadow: 0 0 6px var(--color-secondary);
 }
 
 .conteudo__texto__secundario__imagem {
@@ -121,7 +130,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   gap: 20px;
   font-family: var(--font-secondary);
   text-align: center;
@@ -141,8 +150,8 @@ body {
   height: 100%;
   font-size: 1.5rem;
   font-family: var(--font-secondary);
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   border: none;
   resize: none;
   outline: none;
@@ -323,6 +332,11 @@ input:checked + .slider:before {
 
   .conteudo__texto {
     flex-direction: column;
+  }
+
+  .conteudo__texto__principal__informacao {
+    justify-content: center;
+    font-size: 0.8rem;
   }
 
   .conteudo__texto__principal__botao {

@@ -10,6 +10,14 @@ let imagemAlternativa = document.querySelector(
 let botaoCopiar = document.querySelector(".conteudo__texto__secundario_botao");
 textoAreaPrincipal.focus();
 
+textoAreaPrincipal.addEventListener("input", () => {
+  let regex = /[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜÇáéíóúàèìòùâêîôûãõäëïöüç@#$%^&*()_+]/;
+  if (regex.test(textoAreaPrincipal.value)) {
+    alert("Por favor, evite letras maiúsculas ou caracteres especiais.");
+    textoAreaPrincipal.value = textoAreaPrincipal.value.replace(regex, "");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const switchToggle = document.getElementById("switchToggle");
   // const statusLabel = document.getElementById("status");
@@ -24,26 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     alterarCorVariavelCss("--color-secondary", colorSecondary);
     alterarCorVariavelCss("--color-tertiary", colorSecondary);
     alterarCorVariavelCss("--color-alternativ", colorAlternativ);
-
-    // if (switchToggle.checked) {
-    //   alterarCorVariavelCss("--color-primary", "#030303");
-    //   alterarCorVariavelCss("--color-secondary", "#fafaff");
-    //   alterarCorVariavelCss("--color-tertiary", "#fafaff");
-    //   alterarCorVariavelCss("--color-alternativ", "#363c41");
-    // } else {
-    //   document.body.style.setProperty("--color-primary", "#fffafa");
-    //   document.body.style.setProperty("--color-secondary", "#030303");
-    //   document.body.style.setProperty("--color-tertiary", "#030303");
-    //   document.body.style.setProperty("--color-alternativ", "#b9babb");
-    // }
-
-    // if (switchToggle.checked) {
-    //   console.log(colorDarkMode);
-    //   document.body.style.setProperty("--color-primary", colorDarkMode);
-    // } else {
-    //   console.log(colorDarkMode);
-    //   document.body.style.setProperty("--color-secondary", colorDarkMode);
-    // }
   });
 });
 
