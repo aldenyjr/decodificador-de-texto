@@ -95,6 +95,9 @@ body {
 .conteudo__texto__principal__botao .criptografar,
 .descriptografar,
 .copiar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 1rem 7rem;
   background-color: var(--color-primary);
   border-radius: 1rem;
@@ -112,6 +115,10 @@ body {
 
 .conteudo__texto__principal__botao button:hover {
   background-color: var(--color-alternativ);
+}
+
+.conteudo__texto__principal__botao__lock {
+  fill: var(--color-secondary);
 }
 
 .conteudo__texto__secundario {
@@ -195,15 +202,23 @@ body {
 /* Adicionando botão do Dark Mode*/
 .switch-container {
   display: flex;
-
+  gap: 0.2rem;
   align-items: center;
 }
 
-.switch-container p {
+.switch-container-sun {
+  fill: var(--color-alternativ);
+}
+
+.switch-container-moon {
+  fill: var(--color-alternativ);
+}
+
+/* .switch-container p {
   color: #555;
   padding-right: 10px;
   font-family: var(--font-secondary);
-}
+} */
 
 .switch {
   position: relative;

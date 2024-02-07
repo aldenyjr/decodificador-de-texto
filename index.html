@@ -126,11 +126,33 @@
         <div class="cabecalho__navegacao__rigth">
           <span class="cabecalho__navegacao__texto">#challengeone</span>
           <div class="switch-container">
-            <p>Dark Mode</p>
+            <svg
+              class="switch-container-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+              ></path>
+            </svg>
+            <!-- <p>Dark Mode</p> -->
             <label class="switch">
               <input type="checkbox" id="switchToggle" checked />
               <span class="slider"></span>
             </label>
+            <svg
+              class="switch-container-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"
+              ></path>
+            </svg>
             <!-- <span id="status">OFF</span> -->
           </div>
         </div>
@@ -162,9 +184,31 @@
 
           <div class="conteudo__texto__principal__botao">
             <button class="criptografar" onclick="botaoCriptografar()">
+              <svg
+                class="conteudo__texto__principal__botao__lock"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2.001 2.001 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723z"
+                ></path>
+              </svg>
               Criptografar
             </button>
             <button class="descriptografar" onclick="botaoDescriptografar()">
+              <svg
+                class="conteudo__texto__principal__botao__lock"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 10H9V7c0-1.654 1.346-3 3-3s3 1.346 3 3h2c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.939 5.499A2.002 2.002 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723V20h-2v-2.277a1.992 1.992 0 0 1-.939-2.224z"
+                ></path>
+              </svg>
               Descriptografar
             </button>
           </div>
@@ -723,7 +767,23 @@
           </div>
           <textarea class="conteudo__texto__secundario__area"></textarea>
           <div class="conteudo__texto__secundario_botao">
-            <button class="copiar" onclick="copiarTexto()">Copiar</button>
+            <button class="copiar" onclick="copiarTexto()">
+              <svg
+                class="conteudo__texto__principal__botao__lock"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M14 8H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V10c0-1.103-.897-2-2-2z"
+                ></path>
+                <path
+                  d="M20 2H10a2 2 0 0 0-2 2v2h8a2 2 0 0 1 2 2v8h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"
+                ></path>
+              </svg>
+              Copiar
+            </button>
           </div>
         </section>
       </div>
